@@ -98,7 +98,7 @@ jobs:
           cp macos/Info.plist VencordInstaller.app/Contents/Info.plist
           mv VencordInstaller VencordInstaller.app/Contents/MacOS/VencordInstaller
           cp macos/icon.icns VencordInstaller.app/Contents/Resources/icon.icns
-          codesign --force --sign - --timestamp=none - VencordInstaller.app
+          codesign --force --sign - --timestamp=none VencordInstaller.app
           zip -r VencordInstaller.MacOS.zip VencordInstaller.app
 
       - name: Upload artifact
